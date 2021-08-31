@@ -1,0 +1,5 @@
+function getRSA(password,pubkey){
+setMaxDigits(131); //131 => pubkey的十六进制位数/2+3
+var key = new RSAKeyPair("10001", '', pubkey); //10001 => 加密指数
+return encryptedString(key, password);
+}
